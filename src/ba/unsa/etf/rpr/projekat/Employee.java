@@ -7,8 +7,10 @@ public class Employee {
     private String name, lastName, adress, eMail;
     private LocalDate birthDate;
     private int password;
+    private Job job;
+    private Salary salary;
 
-    public Employee(int employeeId, String name, String lastName, String adress, String eMail, LocalDate birthDate, int password) {
+    public Employee(int employeeId, String name, String lastName, String adress, String eMail, LocalDate birthDate, int password, Job job, Salary salary) {
         this.employeeId = employeeId;
         this.name = name;
         this.lastName = lastName;
@@ -16,6 +18,8 @@ public class Employee {
         this.eMail = eMail;
         this.birthDate = birthDate;
         this.password = password;
+        this.job = job;
+        this.salary = salary;
     }
 
     public int getEmployeeId() {
@@ -72,5 +76,21 @@ public class Employee {
 
     public void setPassword(int password) {
         this.password = password;
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public Salary getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Salary salary) {
+        this.salary = salary;
     }
 }
